@@ -1,0 +1,36 @@
+package pl.krzysh.androiddevicepairing.test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import pl.krzysh.androiddevicepairing.model.Device;
+import pl.krzysh.androiddevicepairing.service.DeviceManager;
+
+public class TestDeviceManager {
+	DeviceManager deviceManager;
+
+	@Before
+	public void setUp() {
+		deviceManager = new DeviceManager();
+	}
+
+	@After
+	public void tearDown() {
+
+	}
+
+	@Test
+	public void testAddGetRemove() {
+		assertEquals(deviceManager.getDevicesCount(), 0);
+		
+		Device testDevice = new Device("testDevice");
+		deviceManager.addDevice(testDevice);
+		assertEquals(deviceManager.getDevicesCount(), 1);
+		assertEquals(deviceManager.getDeviceById("testDevice"), testDevice);
+		assertFalse(deviceManager.isDeviceRegistered("testDevice"));
+	}
+}

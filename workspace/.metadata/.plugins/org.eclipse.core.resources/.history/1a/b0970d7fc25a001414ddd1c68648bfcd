@@ -1,0 +1,10 @@
+package pl.krzysh.androiddevicepairing.model;
+
+public class Device {
+	public String id;
+	
+	public Device(String id)
+	{
+		this.id = id;
+	}
+}

@@ -1,0 +1,96 @@
+!SESSION 2014-10-23 16:17:23.336 -----------------------------------------------
+eclipse.buildId=3.4.0.201310051614-RELEASE-e43
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -data C:\Users\HaladynK\Desktop\AndroidDevicePairing\workspace -os win32 -ws win32 -arch x86_64 -product org.springsource.sts.ide
+
+!ENTRY org.springsource.ide.eclipse.commons.frameworks.core 0 0 2014-10-23 16:17:44.740
+!MESSAGE Result of converting legacy STS 2.x workspace preferences to 3.x
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2014-10-23 16:17:44.740
+!MESSAGE Converted legacy STS plugin preferences
+!SUBENTRY 1 unknown 0 0 2014-10-23 16:17:44.740
+!MESSAGE OK
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2014-10-23 16:17:44.740
+!MESSAGE Converted legacy Roo plugin state locations
+!SUBENTRY 1 org.springsource.ide.eclipse.commons.frameworks.core 0 0 2014-10-23 16:17:44.740
+!MESSAGE Converted legacy STS plugin state locations
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:26.911
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:29.407
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:31.435
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:39.812
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:44.602
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:45.709
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:46.614
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:47.612
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:48.642
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:49.796
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:50.951
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:51.731
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:20:52.714
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:21:01.294
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:21:05.719
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:21:08.110
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:21:12.110
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:25:32.603
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:25:34.319
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:25:34.615
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:25:36.940
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:25:38.141
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:25:38.344
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:25:39.779
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:26:41.800
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-10-23 16:26:44.764
+!MESSAGE The POM for javax.validation:validation-api:jar:1.1.0.Final is missing, no dependency information available

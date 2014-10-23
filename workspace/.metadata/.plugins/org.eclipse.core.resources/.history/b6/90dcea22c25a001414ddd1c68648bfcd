@@ -1,0 +1,5 @@
+package pl.krzysh.androiddevicepairing.model;
+
+public class Device {
+
+}

@@ -1,0 +1,8 @@
+package pl.krzysh.androiddevicepairing.test;
+
+public class Test {
+	@Before
+	public void setUp() {
+		
+	}
+}

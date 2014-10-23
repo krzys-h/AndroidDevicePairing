@@ -1,0 +1,10 @@
+package pl.krzysh.androiddevicepairing.service;
+
+import java.util.ArrayList;
+
+import antlr.collections.List;
+
+public class DeviceManager {
+	private List<Device> devices = new ArrayList<Device>();
+	
+}

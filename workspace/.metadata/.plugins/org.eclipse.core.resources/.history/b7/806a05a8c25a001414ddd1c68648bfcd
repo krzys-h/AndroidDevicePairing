@@ -1,0 +1,27 @@
+package pl.krzysh.androiddevicepairing.service;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import pl.krzysh.androiddevicepairing.model.Device;
+
+public class DeviceManager {
+	private Set<Device> devices = new HashSet<Device>();
+
+	public Set<Device> getDevices() {
+		return devices;
+	}
+	
+	public Device getDeviceById(String id) {
+		for(Device device : devices) {
+			if(device.id == id) {
+				return device;
+			}
+		}
+		return null;
+	}
+	
+	public void addDevice(Device device) {
+		devices.add(device);
+	}
+}

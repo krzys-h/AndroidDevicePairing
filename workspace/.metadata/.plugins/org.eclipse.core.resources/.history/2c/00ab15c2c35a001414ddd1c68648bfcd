@@ -1,0 +1,23 @@
+package pl.krzysh.androiddevicepairing.test;
+
+import org.junit.After;
+import org.junit.Before;
+
+public class Test {
+	DeviceManager deviceManager;
+	
+	@Before
+	public void setUp() {
+		deviceManager = new DeviceManager();
+	}
+	
+	@After
+	public void tearDown() {
+		
+	}
+	
+	
+	public void testDeviceManager() {
+		
+	}
+}
