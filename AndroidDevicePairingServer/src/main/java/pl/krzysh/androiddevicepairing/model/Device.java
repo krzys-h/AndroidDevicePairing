@@ -1,22 +1,24 @@
 package pl.krzysh.androiddevicepairing.model;
 
+import pl.krzysh.androiddevicepairing.service.PermissionManager;
+
 public class Device {
 	private String id;
-	private int accessLevel;
+	private PermissionLevel permissionLevel;
 	
 	public Device(String id)
 	{
 		this.id = id;
-		accessLevel = 0;
+		permissionLevel = PermissionManager.PermissionLevels.user;
 	}
 	
 
-	public int getAccessLevel() {
-		return accessLevel;
+	public PermissionLevel getPermissionLevel() {
+		return permissionLevel;
 	}
 
-	public void setAccessLevel(int accessLevel) {
-		this.accessLevel = accessLevel;
+	public void setPermissionLevel(PermissionLevel level) {
+		permissionLevel = level;
 	}
 
 	public String getId() {
