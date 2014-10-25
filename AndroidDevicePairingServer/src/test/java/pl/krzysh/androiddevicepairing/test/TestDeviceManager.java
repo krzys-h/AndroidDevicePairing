@@ -49,4 +49,20 @@ public class TestDeviceManager {
 		Device dev2 = new Device("test");
 		assertTrue(dev1.equals(dev2));
 	}
+	
+	@Test
+	public void testMultipleAdd() {
+		assertEquals(deviceManager.getDevicesCount(), 0);
+		Device dev1 = new Device("test");
+		deviceManager.addDevice(dev1);
+		assertEquals(deviceManager.getDevicesCount(), 1);
+		Device dev2 = new Device("test");
+		deviceManager.addDevice(dev2);
+		assertEquals(deviceManager.getDevicesCount(), 1);
+		
+		deviceManager.removeDevice(dev1);
+		assertEquals(deviceManager.getDevicesCount(), 0);
+		deviceManager.removeDevice(dev2);
+		assertEquals(deviceManager.getDevicesCount(), 0);
+	}
 }

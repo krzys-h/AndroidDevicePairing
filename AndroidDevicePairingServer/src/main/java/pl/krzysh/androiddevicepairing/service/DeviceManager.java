@@ -14,7 +14,7 @@ public class DeviceManager {
 	
 	public Device getDeviceById(String id) {
 		for(Device device : devices) {
-			if(device.getId() == id) {
+			if(device.getId().equals(id)) {
 				return device;
 			}
 		}
@@ -26,6 +26,7 @@ public class DeviceManager {
 	}
 	
 	public void addDevice(Device device) {
+		if(isDeviceRegistered(device.getId())) return;
 		devices.add(device);
 	}
 	

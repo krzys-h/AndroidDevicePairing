@@ -9,6 +9,8 @@
 
 	<context:component-scan base-package="pl.krzysh.androiddevicepairing" />
 	<mvc:annotation-driven />
+	
+	<bean class="pl.krzysh.androiddevicepairing.service.DeviceManager" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
