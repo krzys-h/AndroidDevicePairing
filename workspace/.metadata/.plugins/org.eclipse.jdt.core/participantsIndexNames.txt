@@ -1,5 +1,0 @@
-INDEX VERSION 1.126
-C:\Users\HaladynK\Desktop\AndroidDevicePairing\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2783687484.index
-\AndroidDevicePairingServer\src\main\java
-C:\Users\HaladynK\Desktop\AndroidDevicePairing\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2723226861.index
-\AndroidDevicePairingServer\src\main\java
