@@ -4,27 +4,35 @@ import pl.krzysh.androiddevicepairing.service.PermissionManager;
 
 public class Device {
 	private String id;
+	private String password;
 	private PermissionLevel permissionLevel;
 	
 	public Device(String id)
 	{
 		this.id = id;
+		this.password = null;
 		permissionLevel = PermissionManager.PermissionLevels.user;
-	}
-	
-
-	public PermissionLevel getPermissionLevel() {
-		return permissionLevel;
-	}
-
-	public void setPermissionLevel(PermissionLevel level) {
-		permissionLevel = level;
 	}
 
 	public String getId() {
 		return id;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public PermissionLevel getPermissionLevel() {
+		return permissionLevel;
+	}
+
+	public void setPermissionLevel(PermissionLevel permissionLevel) {
+		this.permissionLevel = permissionLevel;
+	}
 
 	@Override
 	public boolean equals(Object obj) {
