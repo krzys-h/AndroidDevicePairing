@@ -1,4 +1,5 @@
-<!doctype html>   
+<%@ include file="/WEB-INF/jsp/include/taglibs.jsp" %>
+<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">

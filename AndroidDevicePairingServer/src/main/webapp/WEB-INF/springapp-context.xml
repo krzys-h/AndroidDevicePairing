@@ -11,6 +11,7 @@
 	<mvc:annotation-driven />
 	
 	<bean class="pl.krzysh.androiddevicepairing.service.DeviceManager" />
+	<bean class="pl.krzysh.androiddevicepairing.service.PermissionManager" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
