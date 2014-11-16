@@ -42,7 +42,7 @@ public class AdminController {
 	public String handleDeviceRemove(@RequestParam String deviceid) {
 		Device device = deviceManager.getDeviceById(deviceid);
 		if(device == null)
-			throw new RuntimeException("No such device!"); //TODO: Error page?
+			throw new RuntimeException("No such device!"); //TODO: Error page
 		deviceManager.removeDevice(device);
 		return "redirect:/admin/devices?message=removed";
 	}
@@ -54,7 +54,7 @@ public class AdminController {
 		
 		Device device = deviceManager.getDeviceById(deviceid);
 		if(device == null)
-			throw new RuntimeException("No such device!"); //TODO: Error page?
+			return new ModelAndView("redirect:/admin/devices?message=device_not_found");
 		view.addObject("device", device);
 		
 		view.addObject("permissions", device.getPermissionLevel());
@@ -66,10 +66,34 @@ public class AdminController {
 	public String handleDevicePermissionsSave(@RequestParam String deviceid, @RequestParam String permissionLevel) {
 		Device device = deviceManager.getDeviceById(deviceid);
 		if(device == null)
-			throw new RuntimeException("No such device!"); //TODO: Error page?
+			return "redirect:/admin/devices?message=device_not_found";
 		
 		permissionManager.setPermissionLevel(device, PermissionManager.PermissionLevels.fromString(permissionLevel));
 		
 		return "redirect:/admin/devices?message=permissions_updated";
+	}
+	
+	// Devices - rename page
+	@RequestMapping(value = "/devices/rename", method = RequestMethod.GET)
+	public ModelAndView handleDeviceRename(@RequestParam String deviceid) {
+		ModelAndView view = new ModelAndView("admin", "page", "device_rename");
+		
+		Device device = deviceManager.getDeviceById(deviceid);
+		if(device == null)
+			return new ModelAndView("redirect:/admin/devices?message=device_not_found");
+		view.addObject("device", device);
+		
+		return view;
+	}
+
+	@RequestMapping(value = "/devices/rename", method = RequestMethod.POST)
+	public String handleDeviceRenameSave(@RequestParam String deviceid, @RequestParam String name) {
+		Device device = deviceManager.getDeviceById(deviceid);
+		if(device == null)
+			return "redirect:/admin/devices?message=device_not_found";
+		
+		device.setName(name);
+		
+		return "redirect:/admin/devices?message=name_updated";
 	}
 }

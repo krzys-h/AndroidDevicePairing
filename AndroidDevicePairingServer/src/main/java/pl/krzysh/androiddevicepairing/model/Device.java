@@ -2,18 +2,28 @@ package pl.krzysh.androiddevicepairing.model;
 
 public class Device {
 	private String id;
+	private String name;
 	private String password;
 	private PermissionLevel permissionLevel;
 	
 	public Device(String id)
 	{
 		this.id = id;
+		this.name = null;
 		this.password = null;
 		permissionLevel = null;
 	}
 
 	public String getId() {
 		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPassword() {

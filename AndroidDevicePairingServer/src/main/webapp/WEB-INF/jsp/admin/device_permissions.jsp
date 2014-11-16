@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jsp/include/taglibs.jsp" %>
-<h2>Permissions for device <i>${device.id}</i></h2>
+<h2>Permissions for device <b>${device.name} <i>(${device.id})</i></b></h2>
 <form method="POST" action="?">
-	<input type="hidden" name="deviceid" value="${device.id}" />
+	<input type="hidden" name="deviceid" value="${device.id}">
 	<select name="permissionLevel" class="form-control">
 		<option value="admin"<c:if test="${permissions == 'admin'}"> selected="selected"</c:if>>Admin</option>
 		<option value="editor"<c:if test="${permissions == 'editor'}"> selected="selected"</c:if>>Editor</option>
