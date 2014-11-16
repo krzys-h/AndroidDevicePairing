@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -39,7 +40,35 @@ public class AdminController {
 	@RequestMapping("/admin/devices/remove")
 	public String handleDeviceRemove(@RequestParam String deviceid) {
 		Device device = deviceManager.getDeviceById(deviceid);
+		if(device == null)
+			throw new RuntimeException("No such device!"); //TODO: Error page?
 		deviceManager.removeDevice(device);
 		return "redirect:/admin/devices?message=removed";
+	}
+	
+	// Devices - permissions page
+	@RequestMapping(value = "/admin/devices/permissions", method = RequestMethod.GET)
+	public ModelAndView handleDevicePermissions(@RequestParam String deviceid) {
+		ModelAndView view = new ModelAndView("admin", "page", "device_permissions");
+		
+		Device device = deviceManager.getDeviceById(deviceid);
+		if(device == null)
+			throw new RuntimeException("No such device!"); //TODO: Error page?
+		view.addObject("device", device);
+		
+		view.addObject("permissions", device.getPermissionLevel());
+		
+		return view;
+	}
+
+	@RequestMapping(value = "/admin/devices/permissions", method = RequestMethod.POST)
+	public String handleDevicePermissionsSave(@RequestParam String deviceid, @RequestParam String permissionLevel) {
+		Device device = deviceManager.getDeviceById(deviceid);
+		if(device == null)
+			throw new RuntimeException("No such device!"); //TODO: Error page?
+		
+		permissionManager.setPermissionLevel(device, PermissionManager.PermissionLevels.fromString(permissionLevel));
+		
+		return "redirect:/admin/devices?message=permissions_updated";
 	}
 }

@@ -1,7 +1,5 @@
 package pl.krzysh.androiddevicepairing.model;
 
-import pl.krzysh.androiddevicepairing.service.PermissionManager;
-
 public class Device {
 	private String id;
 	private String password;
@@ -11,7 +9,7 @@ public class Device {
 	{
 		this.id = id;
 		this.password = null;
-		permissionLevel = PermissionManager.PermissionLevels.user;
+		permissionLevel = null;
 	}
 
 	public String getId() {

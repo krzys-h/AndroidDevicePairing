@@ -1,8 +1,9 @@
 package pl.krzysh.androiddevicepairing.test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertNull;
 
 import org.junit.After;
 import org.junit.Before;
@@ -28,14 +29,14 @@ public class TestPermissionManager {
 	@Test
 	public void testSetLevels() {
 		Device device = new Device("device");
-		assertEquals(device.getPermissionLevel(), PermissionManager.PermissionLevels.user);
+		assertNull(device.getPermissionLevel());
 		permissionManager.setPermissionLevel(device, PermissionManager.PermissionLevels.admin);
 		assertEquals(device.getPermissionLevel(), PermissionManager.PermissionLevels.admin);
 	}
 	
 	@Test
 	public void testHasPermission() {
-		PermissionLevel testPermissions = new PermissionLevel();
+		PermissionLevel testPermissions = new PermissionLevel("test");
 		testPermissions.addPermission("testing.test1");
 		Device device = new Device("device");
 		permissionManager.setPermissionLevel(device, testPermissions);
