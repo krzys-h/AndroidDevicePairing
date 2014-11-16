@@ -16,6 +16,7 @@ import pl.krzysh.androiddevicepairing.service.DeviceManager;
 import pl.krzysh.androiddevicepairing.service.PermissionManager;
 
 @Controller
+@RequestMapping("/admin")
 public class AdminController {
 	@Autowired
 	public DeviceManager deviceManager;
@@ -23,13 +24,13 @@ public class AdminController {
 	public PermissionManager permissionManager;
 
 	// Main admin page
-	@RequestMapping("/admin")
+	@RequestMapping("")
 	public ModelAndView handleIndex() throws ServletException, IOException {
 		return new ModelAndView("admin", "page", "index");
 	}
 
 	// Devices page
-	@RequestMapping("/admin/devices")
+	@RequestMapping("/devices")
 	public ModelAndView handleDevices(@RequestParam(required = false) String message) throws ServletException, IOException {
 		ModelAndView view = new ModelAndView("admin", "page", "devices");
 		view.addObject("devices", deviceManager.getDevices());
@@ -37,7 +38,7 @@ public class AdminController {
 		return view;
 	}
 
-	@RequestMapping("/admin/devices/remove")
+	@RequestMapping("/devices/remove")
 	public String handleDeviceRemove(@RequestParam String deviceid) {
 		Device device = deviceManager.getDeviceById(deviceid);
 		if(device == null)
@@ -47,7 +48,7 @@ public class AdminController {
 	}
 	
 	// Devices - permissions page
-	@RequestMapping(value = "/admin/devices/permissions", method = RequestMethod.GET)
+	@RequestMapping(value = "/devices/permissions", method = RequestMethod.GET)
 	public ModelAndView handleDevicePermissions(@RequestParam String deviceid) {
 		ModelAndView view = new ModelAndView("admin", "page", "device_permissions");
 		
@@ -61,7 +62,7 @@ public class AdminController {
 		return view;
 	}
 
-	@RequestMapping(value = "/admin/devices/permissions", method = RequestMethod.POST)
+	@RequestMapping(value = "/devices/permissions", method = RequestMethod.POST)
 	public String handleDevicePermissionsSave(@RequestParam String deviceid, @RequestParam String permissionLevel) {
 		Device device = deviceManager.getDeviceById(deviceid);
 		if(device == null)

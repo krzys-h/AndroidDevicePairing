@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("/")
 public class IndexController {
-	@RequestMapping("/")
+	@RequestMapping("")
     public ModelAndView handleIndex()
             throws ServletException, IOException {
         return new ModelAndView("index");
