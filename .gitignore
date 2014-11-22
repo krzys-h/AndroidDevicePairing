@@ -1,8 +1,8 @@
 .metadata/
 RemoteSystemsTempFiles/
 Servers/
-*/.classpath
-*/.project
-*/.settings
-*/.springBeans
-*/target/*
+**/.classpath
+**/.project
+**/.settings
+**/.springBeans
+**/target/*
