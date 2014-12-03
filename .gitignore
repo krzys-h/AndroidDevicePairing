@@ -6,3 +6,4 @@ Servers/
 **/.settings
 **/.springBeans
 **/target/*
+*.class
